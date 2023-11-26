@@ -1,7 +1,10 @@
+/* Adria Alvarado */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -46,3 +49,322 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+body {
+	font-family: 'Montserrat', sans-serif; /* added the font to the body*/
+	margin: 0;
+	padding: 0;
+	display: flex; /*tried to use flexbox for the body */
+	flex-direction: column;
+  }
+
+header{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 1rem 0;
+	background: linear-gradient(to bottom, #55BCD5, #FFFFFF);/* created gradient for header*/
+}
+
+/* created to change font size of header h1 element */
+header h1 {
+	font-size: 40px;
+	padding: 10px 25px;
+}
+ /* created to make p element aligned with header h1 element */
+header p{
+	padding: 10px 25px;
+	
+}
+
+/* attempted to create the hamburger navigation bar using flexbox, but managed to create the menu bar with padding */
+.nav-menu ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+}
+  
+.nav-menu li {
+	margin-right: 20px;
+	background-color: #F6D64A;
+	padding: 20px;
+}
+  
+.nav-menu a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+main {
+	padding: 20px;
+	flex-grow: 1;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 10px;
+}
+
+h2{
+	font-size: 25px;
+	padding: 10px 10px;
+}
+
+p{
+	font-size: 15px;
+	padding: 10px 10px;
+	line-height: 2;
+}
+
+/* created ids for majorca img elements to get them to look like the mockup */
+#majorca {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+/* created id for the "Plan Your Trip" section to better design it using flexbox */
+#plan {
+	background: #F6D64A;
+	padding-bottom: 20px ;
+}
+
+#plan h2 {
+	padding-left: 20px;
+}
+
+#plan h3 {
+	display: flex;
+	justify-content: center;
+}
+
+/* created another two ids (travel and subtravel) within "Plan Your Trip" section to make the display work according to the mockup */
+#travel {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+
+#travel h3{
+	background: #55BCD5;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#travel a {
+	display: none;
+}
+
+#subtravel{
+	background: #55BCD5;
+	display: block;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	padding-left: 80px;
+	padding-right: 70px;
+	border: 2px solid white;
+	border-radius: 8px;
+	
+}
+
+svg{
+	background:#55BCD5;
+	display: block;
+	margin: auto;
+
+}
+
+/* created to take away image of arrow that is not found in mockup */
+#displaynone{
+	display:none;
+	
+}
+
+/* created ids for "Testimonials" section to create child elements that would work when aligning them like the mockup */
+#testimonials img{
+	display: block;
+	margin: auto;
+	padding-bottom: 10px;
+}
+
+#testimonials h3{
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#testimonials h4{
+	display: flex;
+	justify-content: center;
+	padding-top: 5px;
+}
+
+#testimonials p{
+	display: flex;
+	justify-content: center;
+	margin-left: 80px;
+	margin-right: 80px;
+	font-style: italic;
+}
+/* created id of "about" and class of "group" to design the "About Your Destination" elements */
+  #about {
+	background: #499BD2;
+	display: flex;
+	flex-flow: column wrap;
+	height: 400px;
+  }
+
+  .group{
+	width: 40%;
+	height: 40%;
+  }
+ /* added padding to form to make it match the mockup */
+  form{
+	padding-bottom: 20px;
+  }
+
+  form label{
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+
+   form input{
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		
+   }
+
+   #contact {
+	padding-left: 70px;
+	padding-right: 70px;
+   }
+
+   /* used flexbox to center the footer elements */
+   footer {
+	background: #EAEAEA;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+   }
+
+   /* added to start the tablet view starting at a minimum width of 600px */
+   @media screen and (min-width: 600px){
+	
+	/* ids created for main majorca section using flexbox to make it look like the mockup */
+	#majorcamain{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	
+	#majorca {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+		width:40%;
+		height: 40%;
+		gap: 20px;
+	}
+
+	/* adjusted this section so it looks like the mockup */
+	#travel {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	
+	#subtravel {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+		margin: auto;
+		padding: 40px;
+		gap: 40px;
+	}
+
+	/* adjusted this section so it looks like the mockup */
+	#testimonials {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	
+	#testgroup {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+		
+	}
+	/* adjusted the footer so the elements appear inline rather than in a column like the mobile view */
+	footer {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	
+	footer p {
+		margin: 0;
+	}
+	
+	}
+
+	/* added to start the desktop view of the webpage, starting at 1000px */
+	@media screen and (min-width: 1000px){
+	/* changed majorca elements so it appears more like the mockup */
+	#majorcamain {
+		display: flex;
+		align-items:flex-start;
+	}
+		  
+	#majorcaleft {
+		flex: 1;
+	}
+	/* created to align the img elements to the right of the page */
+	.majorcagroup {
+	margin-left: auto;
+	}
+
+	/* added to adjust layout of about section using flexbox and group class */
+	#about {
+  	display: flex;
+  	flex-wrap: wrap;
+	}
+
+	.group {
+  	flex: 1;
+  	max-width: 300px;
+  	margin: 25px;
+  	text-align: center;
+	}
+
+	#footer2{
+		display:flex;
+		align-items: end;
+	}
+
+	#footer3{
+		display:flex;
+		align-items: end;
+	}
+}
+ 
